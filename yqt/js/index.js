@@ -43,37 +43,7 @@ $(function() {
 				$('#textContant2').removeClass('myhidden').addClass('fadeInRight');
 			},500);				
 		}
-		if(top >= ($('#sedArticle').offset().top)/1.6){
-			$('#sedArticle h1, #sedArticle h3').removeClass('myhidden').addClass('fadeInBottom');				
-		};
-		if(top >= ($('#firstPic').offset().top)/1.3){
-			$('#firstPic').removeClass('myhidden').addClass('fadeInBottom');				
-		}
-		if(top >= ($('#step .firstRow').offset().top)/1.3){
-			$('#step1').removeClass('myhidden').addClass('fadeInLeft');
-			setTimeout(function(){
-				$('#step1Text').removeClass('myhidden').addClass('fadeInRight');
-			},500);				
-		}
-		if(top >= ($('#step .centerRow').offset().top)/1.2){
-			$('#step2Text').removeClass('myhidden').addClass('fadeInLeft');
-			setTimeout(function(){
-				$('#step2').removeClass('myhidden').addClass('fadeInRight');
-			},500);				
-		}
-		if(top >= ($('#step .lastRow').offset().top)/1.2){
-			$('#step3').removeClass('myhidden').addClass('fadeInLeft');
-			setTimeout(function(){
-				$('#step3Text').removeClass('myhidden').addClass('fadeInRight');
-			},500);				
-		}
-		if(top >= ($('#findMore').offset().top)/1.15){
-			$('#findMore').removeClass('myhidden').addClass('fadeInBottom');		
-		}
-		if(top >= ($('#lastPic').offset().top)/1.15){
-			$('#lastPic').removeClass('myhidden').addClass('fadeInBottom');		
-		}	
-    });	
+    });
 
 
     // 回到顶部
