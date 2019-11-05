@@ -1,4 +1,4 @@
-$(function() { 
+$(function() {
 	$('.shop span').click(function(event){
 		$('.mysecMenu').slideToggle(10); 
 		$('.shop span').toggleClass('glyphicon glyphicon-menu-down');

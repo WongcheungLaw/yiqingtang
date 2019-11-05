@@ -1,3 +1,42 @@
+@keyframes fadeInLeft {
+	0% {
+
+		transform: translate3d(-3000px, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInRight {
+	0% {
+
+		transform: translate3d(3000px, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInBottom {
+	0% {
+		transform: translate3d(0, 100px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+.fadeInLeft {
+	animation: fadeInLeft 1.5s;
+}
+.fadeInRight {
+	animation: fadeInRight 1.5s;
+}
+.fadeInBottom {
+	animation: fadeInBottom 1.5s;
+}
+.myhidden {
+	visibility: hidden;
+}
+
 /*导航栏*/
 .myFixed {
 	position: fixed;
@@ -16,7 +55,7 @@
 	display: block;
 	height: 0;
 	width: 0;
-    visibility: hidden;
+	visibility: hidden;
 }
 .myMenu>li {
 	margin: 20px 28px;
@@ -28,16 +67,8 @@
 .myMenu>li>a:hover {
 	background-color: #FFFFFF00;
 }
-.myMenu>li:hover {
-	transition: .1s;
-	background-color: #FFFFFF00;
-	border-bottom: 2px solid #816554;
-}
 .shop:hover .mysecMenu{
 	display: block;
-}
-.myMenu>li:hover >a {
-	color: rgb(129, 101, 84);
 }
 .myMenu .navActive {
 	border-bottom: 2px solid #816554;
@@ -46,7 +77,7 @@
 	color: rgb(129, 101, 84);
 }
 .myMenu li a {
-	color: #B58B72FF;
+	color: #ffffff;
 }
 .shop {
 	position: relative;
@@ -59,17 +90,17 @@
 	left: -10px;
 	top: 38px;
 	border: 1px solid #eee;
-    border-radius: 4px;
-    transition: .5s;
-    background-color: white;
+	border-radius: 4px;
+	transition: .5s;
+	background-color: white;
 }
 .mysecMenu li {
 	padding-left: 25px;
- 	height: 36px;
-    line-height: 36px;
-    cursor: pointer;
-    transition: 1s;
-    color: #666;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+	transition: 1s;
+	color: #666;
 }
 .mysecMenu li a {
 	color: #666;
@@ -87,35 +118,23 @@
 	width: 80%;
 	margin-top: 15px;
 }
-.shop span { 
+.shop span {
 	display: none;
 }
 .menuBtn {
 	display: none;
 }
 
-@keyframes fadeInBottom {
-  0% {
-    transform: translate3d(0, 200px, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-.fadeInBottom {
-	animation: fadeInBottom 1s;
-}
-
 /* banner */
-#mybanner {
-	height: 390px;
-	width: 100%;
-	background: url(../img/contact.jpg) no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: relative;
-    cursor: pointer;
-}
+/*#mybanner {*/
+	/*height: 390px;*/
+	/*width: 100%;*/
+	/*background: url(../img/about.jpg) no-repeat;*/
+	/*background-position: 50% 50%;*/
+	/*background-size: cover;*/
+	/*position: relative;*/
+	/*cursor: pointer;*/
+/*}*/
 #mybanner div {
 	position: absolute;
 	top: 35%;
@@ -137,54 +156,51 @@
 
 /* main */
 #main {
-	margin: 5% 15px 0 15px;
+	margin: 5% 15px;
 	overflow: hidden;
 }
-
-#main .row h2 {
-	font-size: 2em;
-    color: rgb(129, 101, 84);
-}
-#main .row ul {
-	overflow: hidden;
-	margin: 10% 8%;
-}
-#main .row li {
+.row {
 	margin-bottom: 5%;
-	overflow: hidden;
+	line-height: 1.8em;
+	font-family: SimHei;
 }
-.picBox {
-	text-align: right;
+#main .row:nth-child(2) {
+	background-color: #FCF5F1FF;
 }
-.picBox img {
-	border-radius: 50% 50%;
-	transition: 1s;
+#main img {
+	width: 100%;
+	height: 100%;
 }
-/*.picBoxImgHover {
-	transform:rotate(360deg);
-	background-color: #FFE59EFF;
-	transition: 1s;
-}*/
-.picBox img:hover {
-	transform:rotate(360deg);
-	background-color: #BA8B72A8;
-	transition: .5s;
-}
-/*.picBoxImgHoverNo {
-	transform:rotate(360deg);
-	background-color: none;
-	transition: 1s;
-}*/
-.contactTitile {
-	color: rgb(129, 101, 84);
-	font-size: 1.3em;
-}
-.contactDetails {
+#main .row h1 {
+	line-height: 2em;
 	color: rgb(181, 139, 114);
+	font-size: 2.5em;
+}
+#main .row h3 {
+	font-size: 1.4em;
+	color: rgb(129, 101, 84);
+	margin-bottom: 5%;
+}
+#main .row p {
+	color: rgb(205, 192, 185);
 	font-size: 1em;
 }
-#map {
-	height: 380px;
+.info {
+	margin-top: 8%;
+}
+#main .row:nth-child(3) li {
+	color: rgb(205, 192, 185);
+	font-size: 1em;
+	line-height: 2.8em;
+}
+#contact {
+	margin-bottom: 0;
+}
+#contact h3, #contact p {
+	color: rgb(181, 139, 114)!important;
+	text-align: center;
+	width: 100%;
+	line-height: 1;
 }
 
 /* footer */
@@ -195,13 +211,13 @@
 }
 .footerTitle h1 {
 	font-family: "Times New Roman", Times, serif;
-    font-size: 2.5em;
-    color: rgb(181, 139, 114);
+	font-size: 2.5em;
+	color: rgb(181, 139, 114);
 }
 .footerTitle h2 {
 	/*font-family: SimHei;*/
-    font-size: 1em;
-    color: rgb(181, 139, 114);
+	font-size: 1em;
+	color: rgb(181, 139, 114);
 }
 #footer hr {
 	margin: 15px;
@@ -223,35 +239,35 @@
 	padding: 0;
 }
 #footerR input {
-    height: 34px;
-    padding: 6px 12px;
-    color: #555;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	height: 34px;
+	padding: 6px 12px;
+	color: #555;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 #footerR button {
 	border: none;
-    border-radius: 3px;
+	border-radius: 3px;
 	background-color: #222;
 	color: #fff;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 7px 18px;
-    box-shadow: 0 0.5px 3px rgba(0,0,0,.3);
-    outline: 0;
+	cursor: pointer;
+	font-size: 15px;
+	padding: 7px 18px;
+	box-shadow: 0 0.5px 3px rgba(0,0,0,.3);
+	outline: 0;
 }
 
-@media screen and (max-width: 992px) and (min-width:768px) { 
-	
+@media screen and (max-width: 992px) and (min-width:768px) {
+
 }
 @media (max-width:767px) {
-    #mybanner {
-    	height: 220px;
-    }
-    #mybanner h1 {
+	#mybanner {
+		height: 220px;
+	}
+	#mybanner h1 {
 		font-size: 2em;
 		line-height: 1.4;
 	}
@@ -260,29 +276,32 @@
 	}
 
 	#main {
-		margin: 5% 15px;
-		overflow: hidden;
+		margin: 1% 15px;
 	}
 
+	.row h1 {
+		font-size: 2em;
+	}
 	.info {
 		margin: 2% 0;
 	}
 
-	
+
 	#footer .row {
 		width: 100%;
 		text-align: center;
 	}
 	#footerR input {
 		display: block;
-   		width:280px;
-   		margin: 0 auto;
+		width:280px;
+		margin: 0 auto;
 	}
 	#footerR button {
 		display: block;
-   		width:280px;
-   		margin: 10px auto;
+		width:280px;
+		margin: 10px auto;
 	}
+
 	/*导航栏*/
 	.myNav {
 		font-size: 14px;
@@ -297,20 +316,6 @@
 		display: none;
 		margin-bottom: 40px;
 	}
-	.myMenu li a, .myMenu li a:hover, .myMenu>li:hover >a {
-		color: #999;
-	}
-
-	.myMenu>li {
-		color: #999;
-		padding-left: 10px;
-		margin: 20px 40px;
-		border-bottom: 1px solid #333;
-	}
-	.myMenu>li:hover {
-		color: #999;
-		border-bottom: 1px solid #333;
-	}
 	.shop span {
 		display: block;
 		position: absolute;
@@ -320,9 +325,6 @@
 	}
 	.shop:hover .mysecMenu{
 		display: none;
-	}
-	.myMenu>li:hover .myMenu>li>a {
-		color: #999;;
 	}
 	.myMenu .navActive {
 		border-bottom: 1px solid #333;
@@ -337,12 +339,12 @@
 		width: 100%;
 		border: none;
 		border-top: 1px solid #333;
-	    border-radius: 0px;
-	    transition: .5s;
-	    padding: 0;
-	    margin: 0;
-	    font-size: 13px;
-	    background-color: black;
+		border-radius: 0px;
+		transition: .5s;
+		padding: 0;
+		margin: 0;
+		font-size: 13px;
+		background-color: black;
 	}
 	.mysecMenu li a {
 		color: #999;
@@ -353,7 +355,7 @@
 	}
 	.mysecMenu li:hover {
 		background-color: black;
-	}  
+	}
 	.menuBtn {
 		display: block;
 		position: absolute;
@@ -365,29 +367,53 @@
 		color: white;
 		top: 10px;
 		right: 30px;
-	}  
+	}
 	.myMenu li a:focus {
 		background-color: black;
 	}
-    
+
 }
 
 #goTop {
 	position: fixed;
-    right: 15px;
-    bottom: 15px;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    background-color: #888;
-    display: none;
+	right: 15px;
+	bottom: 15px;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	background-color: #888;
+	display: none;
 }
 #goTop span {
 	width: 100%;
 	text-align: center;
-    line-height: 40px;
-    color: white;
+	line-height: 40px;
+	color: white;
 }
-.BMapLabel {
-	border: none!important;
+
+
+
+#article h1{
+	color: rgb(0, 0, 0);
+}
+
+#footerM p{
+	margin: 20px 0;
+	padding: 0;
+}
+
+.myNav {
+	width: 100%;
+	padding: 0 20px;
+	background-color: black;
+}
+.myMenu .navActive {
+	border-bottom: 2px solid #816554;
+}
+.myMenu .navActive>a {
+	color: rgb(255, 255, 255);
+}
+
+.myMenu>li:hover >a {
+	color: #ffffff;
 }
