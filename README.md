@@ -1,6 +1,6 @@
-# skinCareSite
-护肤品牌响应式网站
+# yiqingtang
+八宝活络膏官网
 
-在线演示地址：http://mandy22.gitee.io/skincaresite
+在线演示地址：http://47.107.186.79
 
 47.107.186.79
